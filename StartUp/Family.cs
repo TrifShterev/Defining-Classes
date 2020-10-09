@@ -29,5 +29,10 @@ namespace DefiningClasses
             return oldestPerson;
 
         }
+        public List<Person> GetPersonsOver30()
+        {
+          var oldestPersons = FamilyMembers.OrderBy(x => x.Name).Where(x => x.Age > 30).ToList();
+            return oldestPersons;
+        }
     }
 }
